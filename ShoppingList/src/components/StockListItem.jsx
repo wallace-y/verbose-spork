@@ -4,6 +4,7 @@ function StockListItem(props) {
   const setShoppingList = props.setShoppingList;
   const shoppingListOfItems = props.shoppingListOfItems;
   const setStockListOfItems = props.setStockListOfItems;
+  const listStock = props.listStock;
 
   const addItem = (name) => {
     setShoppingList((currentList) => {
@@ -13,12 +14,20 @@ function StockListItem(props) {
       const notInCurrentList = currentList.filter((item) => {
         return item.name !== name;
       });
+      const currentItemInStock = listStock.filter((stock) => {
+        return stock.name === name;
+      });
+      const currentItemInStockQuantity = currentItemInStock[0].quantity;
 
-      if (currentListItem.length > 0) {
-        let newQuantity = currentListItem[0].quantity + 1;
-        return [{ name: name, quantity: newQuantity }, ...notInCurrentList];
+      if (currentItemInStockQuantity !== 0) {
+        if (currentListItem.length > 0) {
+          let newQuantity = currentListItem[0].quantity + 1;
+          return [{ name: name, quantity: newQuantity }, ...notInCurrentList];
+        } else {
+          return [{ name: name, quantity: 1 }, ...currentList];
+        }
       } else {
-        return [{ name: name, quantity: 1 }, ...currentList];
+        return [...currentList]
       }
     });
     setStockListOfItems((currentList) => {

@@ -5,7 +5,7 @@ import StockList from "./StockList";
 function Container() {
   const initialStockList = [
     { name: "milk", quantity: 50 },
-    { name: "cheese", quantity: 50 },
+    { name: "cheese", quantity: 3 },
     { name: "bread", quantity: 50 },
     { name: "eggs", quantity: 50 },
   ];

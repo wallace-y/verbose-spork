@@ -18,6 +18,7 @@ function StockList(props) {
               quantity={element.quantity}
               setShoppingList={setShoppingList}
               shoppingListOfItems={shoppingListOfItems}
+              listStock={listStock}
               setStockListOfItems={setStockListOfItems}
             />
           );
