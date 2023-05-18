@@ -19,6 +19,8 @@ APP
 StockList could be an array of items
 [Milk,Eggs,Cheese,etc...]
 COULD have a quantity value also - ie available stock but optional
+ie
+[{milk: {quantity: 50}, cheese:{quantity: 50}}]
 
 SelectedItems could be an object
 
