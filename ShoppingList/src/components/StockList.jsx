@@ -5,6 +5,8 @@ function StockList(props) {
   const listStock = props.stock;
   const setShoppingList = props.setShoppingList;
   const shoppingListOfItems = props.shoppingListOfItems;
+  const setStockListOfItems = props.setStockListOfItems;
+
   return (
     <>
       <h2>Available Items</h2>
@@ -16,6 +18,7 @@ function StockList(props) {
               quantity={element.quantity}
               setShoppingList={setShoppingList}
               shoppingListOfItems={shoppingListOfItems}
+              setStockListOfItems={setStockListOfItems}
             />
           );
         })}

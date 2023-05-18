@@ -8,7 +8,6 @@ function Container() {
     { name: "cheese", quantity: 50 },
     { name: "bread", quantity: 50 },
     { name: "eggs", quantity: 50 },
-
   ];
   const [StockListOfItems, setStockListOfItems] = useState(initialStockList);
 
@@ -24,6 +23,7 @@ function Container() {
         stock={StockListOfItems}
         setShoppingList={setShoppingList}
         shoppingListOfItems={shoppingListOfItems}
+        setStockListOfItems={setStockListOfItems}
       />
     </>
   );
