@@ -2,7 +2,7 @@
 
 ### To Do
 
-- [] Change title in index.html to be something more descriptive thatn Vite + React
+- [X] Change title in index.html to be something more descriptive thatn Vite + React
 - [] Update functionality of the Remove button in the selected items list to ADD BACK quantity into stock when it is removed from a list
 - [] Add header styling to the app
 - [] Add main component styling in the app (container for two lists)
