@@ -8,9 +8,9 @@ function StockList(props) {
   const setStockListOfItems = props.setStockListOfItems;
 
   return (
-    <>
+    <div className="mx-3">
       <h2>Available Items</h2>
-      <ul>
+      <ul className="list-group ">
         {listStock.map((element) => {
           return (
             <StockListItem
@@ -24,7 +24,7 @@ function StockList(props) {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

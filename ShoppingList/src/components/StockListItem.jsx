@@ -27,7 +27,7 @@ function StockListItem(props) {
           return [{ name: name, quantity: 1 }, ...currentList];
         }
       } else {
-        return [...currentList]
+        return [...currentList];
       }
     });
     setStockListOfItems((currentList) => {
@@ -46,18 +46,18 @@ function StockListItem(props) {
     });
   };
   return (
-    <>
-      <li>
-        <p>{name}</p> <p>{quantity}</p>
-      </li>{" "}
+    <li className="list-group-item list-group-item d-flex justify-content-between align-items-center">
       <button
+        className="btn btn-success"
         onClick={() => {
           addItem(name);
         }}
       >
         Add
       </button>
-    </>
+      {name}
+      <span className="badge bg-dark rounded-pill"> {quantity}</span>
+    </li>
   );
 }
 

@@ -5,9 +5,9 @@ function ShoppingList(props) {
   const setShoppingList = props.setShoppingList;
 
   return (
-    <>
+    <div className="mx-3">
       <h2>Selected Items</h2>
-      <ul>
+      <ul className="list-group">
         {shoppingListOfItems.map((element) => {
           return (
             <ShoppingListItem
@@ -19,7 +19,7 @@ function ShoppingList(props) {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

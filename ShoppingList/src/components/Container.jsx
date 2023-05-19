@@ -14,18 +14,18 @@ function Container() {
   const [shoppingListOfItems, setShoppingList] = useState([]);
 
   return (
-    <>
-      <ShoppingList
-        setShoppingList={setShoppingList}
-        shoppingListOfItems={shoppingListOfItems}
-      />
+    <div className="d-flex flex-row justify-content-between mb-3">
       <StockList
         stock={StockListOfItems}
         setShoppingList={setShoppingList}
         shoppingListOfItems={shoppingListOfItems}
         setStockListOfItems={setStockListOfItems}
       />
-    </>
+      <ShoppingList
+        setShoppingList={setShoppingList}
+        shoppingListOfItems={shoppingListOfItems}
+      />
+    </div>
   );
 }
 
